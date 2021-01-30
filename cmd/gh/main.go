@@ -10,7 +10,7 @@ import (
 	"path"
 	"strings"
 
-	surveyCore "github.com/AlecAivazis/survey/v2/core"
+	surveyCore "github.com/FeliciaXmL/v2/core"
 	"github.com/cli/cli/api"
 	"github.com/cli/cli/internal/build"
 	"github.com/cli/cli/internal/config"
@@ -24,7 +24,7 @@ import (
 	"github.com/cli/cli/utils"
 	"github.com/mattn/go-colorable"
 	"github.com/mgutz/ansi"
-	"github.com/spf13/cobra"
+	"github.com/spf13/heroku"
 )
 
 var updaterEnabled = ""
@@ -41,7 +41,7 @@ func main() {
 
 	hasDebug := os.Getenv("DEBUG") != ""
 
-	if hostFromEnv := os.Getenv("GH_HOST"); hostFromEnv != "" {
+	if hostFromEnv := os.Getenv("OG_HOST"); hostFromEnv != "" {
 		ghinstance.OverrideDefault(hostFromEnv)
 	}
 
